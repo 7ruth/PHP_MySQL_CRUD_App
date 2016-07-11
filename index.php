@@ -2,6 +2,9 @@
 
 <?php
   include_once 'config.php';
+  //set variable $a to name of the DB we are connected to so its obvious on the main page
+  $a = mysql_result(mysql_query("SELECT DATABASE();"),0);
+  //delete functionality
   if(isset($_GET['delete_id'])){
    $sql_query="DELETE FROM child WHERE id=".$_GET['delete_id'];
    mysql_query($sql_query);
@@ -20,20 +23,24 @@
      }
     }
     function delete_id(id){
-     if(confirm('Sure to Delete ?'))
-      {
-        window.location.href='index.php?delete_id='+id;
-      }
+     if(confirm('Sure to Delete ?')){
+      window.location.href='index.php?delete_id='+id;
+     }
     }
-</script>
+  </script>
 </head>
 <body>
   <center>
+    <div id="header">
+     <div id="content">
+        <label>Connected to: <?php echo $a?> database</label>
+        </div>
+    </div>
     <div id="body">
       <div id="content">
         <table align="center">
           <tr>
-            <th colspan="6"><a href="add_data.php">add data here.</a></th>
+            <th colspan="6"><a href="add_data.php">Add data!</a></th>
           </tr>
           <th>ID</th>
           <th>Parent ID</th>

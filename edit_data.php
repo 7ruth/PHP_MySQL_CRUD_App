@@ -33,24 +33,23 @@ if(isset($_POST['btn-update'])){
 
 <div id="body">
  <div id="content">
-    <form method="post">
-    <table align="center">
-      <tr>
-      <td><input type="text" name="name" placeholder="Name" value="<?php echo $fetched_row['name']; ?>" required /></td>
-      </tr>
-      <tr>
-      <td><input type="text" name="long_description" placeholder="Long Description" value="<?php echo $fetched_row['long_description']; ?>" required /></td>
-      </tr>
+  <form method="post">
+  <table align="center">
     <tr>
-    <td>
-    <button type="submit" name="btn-update"><strong>UPDATE</strong></button>
-    </td>
+      <td><input type="text" name="name" placeholder="Name" value="<?php echo $fetched_row['name']; ?>" required /></td>
     </tr>
-    </table>
-    </form>
-    </div>
+    <tr>
+      <td><input type="text" name="long_description" placeholder="Long Description" value="<?php echo $fetched_row['long_description']; ?>" required /></td>
+    </tr>
+    <tr>
+      <td>
+        <button type="submit" name="btn-update"><strong>UPDATE</strong></button>
+      </td>
+    </tr>
+   </table>
+   </form>
+  </div>
 </div>
-
 </center>
 </body>
 </html>

@@ -41,7 +41,7 @@ if(isset($_POST['btn-save'])){
     <form method="post"  >
     <table align="center">
     <tr>
-    <td align="center"><a href="index.php">back to main page</a></td>
+    <td align="center"><a href="index.php">Back to Index</a></td>
     </tr>
     <tr>
     <td><input type="text" name="name" placeholder="Name" required /></td>

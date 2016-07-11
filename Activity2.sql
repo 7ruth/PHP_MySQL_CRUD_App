@@ -1,0 +1,1 @@
+-- Steps I took to complete activity 2
